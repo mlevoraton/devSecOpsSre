@@ -109,7 +109,7 @@ Create a taint on a node
 
 kubectl taint nodes node01 spray=mortein:NoSchedule
 
-List nodes and pods
+List pods with node and ip info
 
 kubectl get pods -o wide 
 

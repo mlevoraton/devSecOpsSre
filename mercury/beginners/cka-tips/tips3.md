@@ -92,3 +92,27 @@ git clone https://github.com/kodekloudhub/kubernetes-metrics-server.git
 get metrics form metrics server 
 kubectl top pods
 kubectl top nodes
+
+Get strategy type from a deployment
+
+kubectl describe deployment frontend | grep StrategyType
+
+Edit deployment
+kubectl edit deployment frontend
+
+Create config map directly 
+
+kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
+
+Create secrets 
+    Generic
+kubectl create secret generic <secret-name> --from-literal=<key>=<value>
+
+Get secret decoded
+kubectl get secret <secret-name> -o yaml
+
+Get logs from a pod from a namespace
+kubectl -n <namespace> logs <pod>
+
+Replace pod definition
+kubectl replace --force -f <file>
